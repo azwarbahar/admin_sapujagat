@@ -236,6 +236,10 @@ $get_data_akun = mysqli_fetch_assoc($query_header_akun);
                             </ul>
                         </li>
 
+                        <li class="has_sub">
+                            <a href="export-data.php" class="waves-effect"><i class="ti-export"></i> <span>Export Data</span></a>
+                        </li>
+
                         <div class="clearfix"></div>
 
                         <li class="has_sub">

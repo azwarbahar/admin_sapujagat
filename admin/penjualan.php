@@ -1,7 +1,7 @@
 <?php
 require_once '../template/header.php';
 
-$kunjungan = mysqli_query($conn, "SELECT * FROM tb_kunjungan");
+$kunjungan = mysqli_query($conn, "SELECT * FROM tb_kunjungan ORDER BY id DESC");
 
 ?>
 
@@ -30,8 +30,6 @@ $kunjungan = mysqli_query($conn, "SELECT * FROM tb_kunjungan");
                 </div>
             </div>
 
-
-
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card-box table-responsive">
@@ -51,10 +49,7 @@ $kunjungan = mysqli_query($conn, "SELECT * FROM tb_kunjungan");
                                     <th>Salesforce</th>
                                 </tr>
                             </thead>
-
-
                             <tbody>
-
                                 <?php $i = 1;
                                 foreach ($kunjungan as $dta) { ?>
                                     <tr>
@@ -92,9 +87,6 @@ $kunjungan = mysqli_query($conn, "SELECT * FROM tb_kunjungan");
                     </div>
                 </div>
             </div>
-
-
-
 
             <!-- ============================================================== -->
             <!-- End Right content here -->
