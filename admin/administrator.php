@@ -29,8 +29,6 @@ $admin = mysqli_query($conn, "SELECT * FROM tb_admin");
                 </div>
             </div>
 
-
-
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card-box table-responsive">
@@ -110,15 +108,7 @@ $admin = mysqli_query($conn, "SELECT * FROM tb_admin");
                         </div>
                         <!-- AKHIR MODAL TABAH ADMIN -->
 
-
                         <a href="#" class="btn btn-default btn-rounded waves-effect waves-light m-b-30" data-toggle="modal" data-target="#tambah-admin">Tambah Admin</a>
-
-                        <?php
-                        // if ($role == "Super") {
-                        //     echo "
-                        //     <a href='#' class='btn btn-inverse btn-rounded waves-effect waves-light m-b-30' data-toggle='modal' data-target='#tambah-super-admin'>Tambah Super Admin</a>";
-                        // }
-                        ?>
 
                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                             <thead>
@@ -155,7 +145,6 @@ $admin = mysqli_query($conn, "SELECT * FROM tb_admin");
                                             <a href="#" type="button" data-toggle="modal" data-target="#hapus-<?= $dta['id'] ?>" class="table-action-btn" style="color: #98a6ad; display: inline-block; width: 24px; border-radius: 50%; text-align: center; line-height: 18px; font-size: 16px;"><i class="md md-delete"></i></a>
                                         </td>
                                     </tr>
-
 
                                     <!-- MODAL EDIT ADMIN -->
                                     <div id="edit-<?= $dta['id'] ?>" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -276,7 +265,6 @@ $admin = mysqli_query($conn, "SELECT * FROM tb_admin");
                                     </div>
                                     <!-- AKHIR MODAL EDIT ADMIN -->
 
-
                                     <!-- MODAL HAPUS -->
                                     <div class="modal fade" id="hapus-<?= $dta['id'] ?>">
                                         <div class="modal-dialog">
@@ -309,7 +297,6 @@ $admin = mysqli_query($conn, "SELECT * FROM tb_admin");
                     </div>
                 </div>
             </div>
-
 
             <?php
             require_once '../template/footer.php';

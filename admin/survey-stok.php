@@ -35,7 +35,6 @@ require_once '../template/header.php';
             <div class="row">
                 <div class="col-sm-12">
 
-
                     <!-- TELKOMSEL -->
                     <div class="portlet">
                         <div class="portlet-heading portlet-default bg-danger">
@@ -307,7 +306,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-xl" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable3" class="table table-striped table-bordered">
+                                <table id="datatable4" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->
@@ -392,7 +391,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-axis" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable3" class="table table-striped table-bordered">
+                                <table id="datatable5" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->
@@ -477,7 +476,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-smartfren" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable3" class="table table-striped table-bordered">
+                                <table id="datatable6" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->

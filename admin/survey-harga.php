@@ -14,7 +14,6 @@ require_once '../template/header.php';
             <!-- Page-Title -->
             <div class="row">
                 <div class="col-sm-12">
-
                     <h4 class="page-title">Survey Harga</h4>
                     <ol class="breadcrumb">
                         <li>
@@ -29,8 +28,6 @@ require_once '../template/header.php';
                     </ol>
                 </div>
             </div>
-
-
 
             <div class="row">
                 <div class="col-sm-12">
@@ -101,8 +98,10 @@ require_once '../template/header.php';
                                                     <td> - </td>";
                                                 } else {
                                                     $dta_produk_kosong = mysqli_fetch_assoc($produk_kosong);
-                                                    echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                    <td> $dta_produk_kosong[harga_jual] </td>";
+                                                    $modal = number_format($dta_produk_kosong['harga_modal']);
+                                                    $jual = number_format($dta_produk_kosong['harga_jual']);
+                                                    echo "<td> $modal </td>
+                                                    <td> $jual </td>";
                                                 }
                                                 foreach ($produk_all_operator_telkomsel as $dta_produk_all_operator_telkomsel) {
                                                     $produk = mysqli_query($conn, "SELECT * FROM tb_survey_harga WHERE produk_id = '$dta_produk_all_operator_telkomsel[id]' AND
@@ -113,8 +112,10 @@ require_once '../template/header.php';
                                                         <td> - </td>";
                                                     } else {
                                                         $dta_produk = mysqli_fetch_assoc($produk);
-                                                        echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                        <td> $dta_produk_kosong[harga_jual] </td>";
+                                                        $modal = number_format($dta_produk['harga_modal']);
+                                                        $jual = number_format($dta_produk['harga_jual']);
+                                                        echo "<td> $modal </td>
+                                                        <td> $jual </td>";
                                                     }
                                                 }
                                                 $result_sales = mysqli_query($conn, "SELECT * FROM tb_sales WHERE id = '$dta_kunjungan[sales_id]'");
@@ -200,8 +201,10 @@ require_once '../template/header.php';
                                 <td> - </td>";
                                                 } else {
                                                     $dta_produk_kosong = mysqli_fetch_assoc($produk_kosong);
-                                                    echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                <td> $dta_produk_kosong[harga_jual] </td>";
+                                                    $modal = number_format($dta_produk_kosong['harga_modal']);
+                                                    $jual = number_format($dta_produk_kosong['harga_jual']);
+                                                    echo "<td> $modal </td>
+                                                    <td> $jual </td>";
                                                 }
                                                 foreach ($produk_all_operator_telkomsel as $dta_produk_all_operator_telkomsel) {
                                                     $produk = mysqli_query($conn, "SELECT * FROM tb_survey_harga WHERE produk_id = '$dta_produk_all_operator_telkomsel[id]' AND
@@ -212,8 +215,10 @@ require_once '../template/header.php';
                                     <td> - </td>";
                                                     } else {
                                                         $dta_produk = mysqli_fetch_assoc($produk);
-                                                        echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                    <td> $dta_produk_kosong[harga_jual] </td>";
+                                                        $modal = number_format($dta_produk['harga_modal']);
+                                                        $jual = number_format($dta_produk['harga_jual']);
+                                                        echo "<td> $modal </td>
+                                                        <td> $jual </td>";
                                                     }
                                                 }
                                                 $result_sales = mysqli_query($conn, "SELECT * FROM tb_sales WHERE id = '$dta_kunjungan[sales_id]'");
@@ -249,7 +254,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-tree" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable2" class="table table-striped table-bordered">
+                                <table id="datatable3" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->
@@ -299,8 +304,10 @@ require_once '../template/header.php';
                                                         <td> - </td>";
                                                 } else {
                                                     $dta_produk_kosong = mysqli_fetch_assoc($produk_kosong);
-                                                    echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                        <td> $dta_produk_kosong[harga_jual] </td>";
+                                                    $modal = number_format($dta_produk_kosong['harga_modal']);
+                                                    $jual = number_format($dta_produk_kosong['harga_jual']);
+                                                    echo "<td> $modal </td>
+                                                    <td> $jual </td>";
                                                 }
                                                 foreach ($produk_all_operator_telkomsel as $dta_produk_all_operator_telkomsel) {
                                                     $produk = mysqli_query($conn, "SELECT * FROM tb_survey_harga WHERE produk_id = '$dta_produk_all_operator_telkomsel[id]' AND
@@ -311,8 +318,10 @@ require_once '../template/header.php';
                                                             <td> - </td>";
                                                     } else {
                                                         $dta_produk = mysqli_fetch_assoc($produk);
-                                                        echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                            <td> $dta_produk_kosong[harga_jual] </td>";
+                                                        $modal = number_format($dta_produk['harga_modal']);
+                                                        $jual = number_format($dta_produk['harga_jual']);
+                                                        echo "<td> $modal </td>
+                                                        <td> $jual </td>";;
                                                     }
                                                 }
                                                 $result_sales = mysqli_query($conn, "SELECT * FROM tb_sales WHERE id = '$dta_kunjungan[sales_id]'");
@@ -348,7 +357,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-xl" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable2" class="table table-striped table-bordered">
+                                <table id="datatable4" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->
@@ -398,8 +407,10 @@ require_once '../template/header.php';
                                                                 <td> - </td>";
                                                 } else {
                                                     $dta_produk_kosong = mysqli_fetch_assoc($produk_kosong);
-                                                    echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                                <td> $dta_produk_kosong[harga_jual] </td>";
+                                                    $modal = number_format($dta_produk_kosong['harga_modal']);
+                                                    $jual = number_format($dta_produk_kosong['harga_jual']);
+                                                    echo "<td> $modal </td>
+                                                    <td> $jual </td>";
                                                 }
                                                 foreach ($produk_all_operator_telkomsel as $dta_produk_all_operator_telkomsel) {
                                                     $produk = mysqli_query($conn, "SELECT * FROM tb_survey_harga WHERE produk_id = '$dta_produk_all_operator_telkomsel[id]' AND
@@ -410,8 +421,10 @@ require_once '../template/header.php';
                                                                     <td> - </td>";
                                                     } else {
                                                         $dta_produk = mysqli_fetch_assoc($produk);
-                                                        echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                                    <td> $dta_produk_kosong[harga_jual] </td>";
+                                                        $modal = number_format($dta_produk['harga_modal']);
+                                                        $jual = number_format($dta_produk['harga_jual']);
+                                                        echo "<td> $modal </td>
+                                                        <td> $jual </td>";
                                                     }
                                                 }
                                                 $result_sales = mysqli_query($conn, "SELECT * FROM tb_sales WHERE id = '$dta_kunjungan[sales_id]'");
@@ -447,7 +460,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-axis" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable2" class="table table-striped table-bordered">
+                                <table id="datatable5" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->
@@ -497,8 +510,10 @@ require_once '../template/header.php';
                                                         <td> - </td>";
                                                 } else {
                                                     $dta_produk_kosong = mysqli_fetch_assoc($produk_kosong);
-                                                    echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                        <td> $dta_produk_kosong[harga_jual] </td>";
+                                                    $modal = number_format($dta_produk_kosong['harga_modal']);
+                                                    $jual = number_format($dta_produk_kosong['harga_jual']);
+                                                    echo "<td> $modal </td>
+                                                    <td> $jual </td>";
                                                 }
                                                 foreach ($produk_all_operator_telkomsel as $dta_produk_all_operator_telkomsel) {
                                                     $produk = mysqli_query($conn, "SELECT * FROM tb_survey_harga WHERE produk_id = '$dta_produk_all_operator_telkomsel[id]' AND
@@ -509,8 +524,10 @@ require_once '../template/header.php';
                                                 <td> - </td>";
                                                     } else {
                                                         $dta_produk = mysqli_fetch_assoc($produk);
-                                                        echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                <td> $dta_produk_kosong[harga_jual] </td>";
+                                                        $modal = number_format($dta_produk['harga_modal']);
+                                                        $jual = number_format($dta_produk['harga_jual']);
+                                                        echo "<td> $modal </td>
+                                                        <td> $jual </td>";
                                                     }
                                                 }
                                                 $result_sales = mysqli_query($conn, "SELECT * FROM tb_sales WHERE id = '$dta_kunjungan[sales_id]'");
@@ -546,7 +563,7 @@ require_once '../template/header.php';
                         <!-- <br> -->
                         <div id="bg-post-smartfren" class="panel-collapse collapse in">
                             <div class="portlet-body  table-responsive">
-                                <table id="datatable2" class="table table-striped table-bordered">
+                                <table id="datatable6" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <!-- <th>Outlet</th> -->
@@ -596,8 +613,10 @@ require_once '../template/header.php';
                                                             <td> - </td>";
                                                 } else {
                                                     $dta_produk_kosong = mysqli_fetch_assoc($produk_kosong);
-                                                    echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                                        <td> $dta_produk_kosong[harga_jual] </td>";
+                                                    $modal = number_format($dta_produk_kosong['harga_modal']);
+                                                    $jual = number_format($dta_produk_kosong['harga_jual']);
+                                                    echo "<td> $modal </td>
+                                                    <td> $jual </td>";
                                                 }
                                                 foreach ($produk_all_operator_telkomsel as $dta_produk_all_operator_telkomsel) {
                                                     $produk = mysqli_query($conn, "SELECT * FROM tb_survey_harga WHERE produk_id = '$dta_produk_all_operator_telkomsel[id]' AND
@@ -608,8 +627,10 @@ require_once '../template/header.php';
                                                                 <td> - </td>";
                                                     } else {
                                                         $dta_produk = mysqli_fetch_assoc($produk);
-                                                        echo "<td> $dta_produk_kosong[harga_modal] </td>
-                                                                <td> $dta_produk_kosong[harga_jual] </td>";
+                                                        $modal = number_format($dta_produk['harga_modal']);
+                                                        $jual = number_format($dta_produk['harga_jual']);
+                                                        echo "<td> $modal </td>
+                                                        <td> $jual </td>";
                                                     }
                                                 }
                                                 $result_sales = mysqli_query($conn, "SELECT * FROM tb_sales WHERE id = '$dta_kunjungan[sales_id]'");
@@ -628,7 +649,6 @@ require_once '../template/header.php';
 
                         </div>
                     </div>
-
 
                 </div>
 
