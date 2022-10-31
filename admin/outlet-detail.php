@@ -268,7 +268,7 @@ $dta = mysqli_fetch_assoc($result);
                         </div>
                         <!-- <br> -->
                         <div id="bg-post-loker" class="panel-collapse collapse in">
-                            <div class="portlet-body">
+                            <div class="portlet-body table-responsive">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <ul class="nav nav-pills m-b-30 pull-left">
@@ -390,7 +390,7 @@ $dta = mysqli_fetch_assoc($result);
                                             <!-- Harga dan stok Indosat -->
                                             <div id="survey-stok-indosat" class="tab-pane">
                                                 <div class="row">
-                                                    <div class="p-20">
+                                                    <div class="p-20 ">
                                                         <table class="table table-striped m-0">
                                                             <thead>
                                                                 <tr>
@@ -484,7 +484,7 @@ $dta = mysqli_fetch_assoc($result);
                                             <!-- Harga dan stok Tree -->
                                             <div id="survey-stok-tree" class="tab-pane">
                                                 <div class="row">
-                                                    <div class="p-20">
+                                                    <div class="p-20 ">
                                                         <table class="table table-striped m-0">
                                                             <thead>
                                                                 <tr>
@@ -578,7 +578,7 @@ $dta = mysqli_fetch_assoc($result);
                                             <!-- Harga dan stok XL -->
                                             <div id="survey-stok-xl" class="tab-pane">
                                                 <div class="row">
-                                                    <div class="p-20">
+                                                    <div class="p-20 ">
                                                         <table class="table table-striped m-0">
                                                             <thead>
                                                                 <tr>
@@ -672,7 +672,7 @@ $dta = mysqli_fetch_assoc($result);
                                             <!-- Harga dan stok Axis -->
                                             <div id="survey-stok-axis" class="tab-pane">
                                                 <div class="row">
-                                                    <div class="p-20">
+                                                    <div class="p-20 ">
                                                         <table class="table table-striped m-0">
                                                             <thead>
                                                                 <tr>
@@ -766,7 +766,7 @@ $dta = mysqli_fetch_assoc($result);
                                             <!-- Harga dan stok Smartfren -->
                                             <div id="survey-stok-smartfren" class="tab-pane">
                                                 <div class="row">
-                                                    <div class="p-20">
+                                                    <div class="p-20 ">
                                                         <table class="table table-striped m-0">
                                                             <thead>
                                                                 <tr>
